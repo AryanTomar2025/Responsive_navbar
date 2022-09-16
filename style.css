@@ -1,0 +1,74 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: black; */
+  background: linear-gradient(to right, #ee0979, #ff6a00);
+  align-items: center;
+  height: 100px;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+  /* background: blue; */
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  /* background: blue; */
+  padding: 8px 10px;
+}
+nav ul li a:hover {
+  color: black;
+  transition: 0.7s;
+}
+nav .logo {
+  font-size: xx-large;
+  color: black;
+  /* background: blue; */
+}
+nav .menu-btn {
+  color: white;
+  display: none;
+}
+#click {
+  display: none;
+}
+@media (max-width: 875px) {
+  nav ul {
+    position: fixed;
+    top: 90px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+  nav ul li {
+    margin: 40px 0;
+  }
+  nav ul li a {
+    color: black;
+  }
+  nav .menu-btn {
+    display: block;
+    color: white;
+  }
+  #click:checked ~ ul {
+    left: 0%;
+  }
+  #click:checked ~ .menu-btn :before {
+    content: "\f00d";
+  }
+}
